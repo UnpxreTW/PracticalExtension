@@ -10,7 +10,7 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "PracticalExtension", dependencies: []),
-        .testTarget(name: "PracticalExtensionTests", dependencies: ["PracticalExtension"]),
+        .target(name: "PracticalExtension", dependencies: ["PracticalSwiftExtension"]),
+        .target(name: "PracticalSwiftExtension")
     ]
 )
