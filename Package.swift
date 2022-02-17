@@ -11,6 +11,7 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "PracticalExtension", dependencies: ["PracticalSwiftExtension"]),
-        .target(name: "PracticalSwiftExtension")
+        .target(name: "PracticalSwiftExtension"),
+        .testTarget(name: "PracticalSwiftExtensionTest", dependencies: ["PracticalSwiftExtension"])
     ]
 )
