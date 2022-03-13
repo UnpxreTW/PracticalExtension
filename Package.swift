@@ -8,13 +8,15 @@ let package = Package(
     products: [
         .library(name: "PracticalExtension", targets: ["PracticalExtension"]),
         .library(name: "PracticalSwiftExtension", targets: ["PracticalSwiftExtension"]),
-        .library(name: "PracticalFoundationExtension", targets: ["PracticalFoundationExtension"])
+        .library(name: "PracticalFoundationExtension", targets: ["PracticalFoundationExtension"]),
+        .library(name: "PracticalUIKitExtension", targets: ["PracticalUIKitExtension"])
     ],
     dependencies: [],
     targets: [
-        .target(name: "PracticalExtension", dependencies: ["PracticalSwiftExtension", "PracticalFoundationExtension"]),
+        .target(name: "PracticalExtension", dependencies: ["PracticalSwiftExtension", "PracticalFoundationExtension", "PracticalUIKitExtension"]),
         .target(name: "PracticalSwiftExtension"),
         .target(name: "PracticalFoundationExtension"),
+        .target(name: "PracticalUIKitExtension"),
         .testTarget(name: "PracticalSwiftExtensionTest", dependencies: ["PracticalSwiftExtension"])
     ]
 )
