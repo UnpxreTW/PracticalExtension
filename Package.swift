@@ -14,9 +14,9 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "PracticalExtension", dependencies: ["PracticalSwiftExtension", "PracticalFoundationExtension", "PracticalUIKitExtension"]),
-        .target(name: "PracticalSwiftExtension"),
-        .target(name: "PracticalFoundationExtension"),
-        .target(name: "PracticalUIKitExtension"),
+        .target(name: "PracticalSwiftExtension", dependencies: []),
+        .target(name: "PracticalFoundationExtension", dependencies: []),
+        .target(name: "PracticalUIKitExtension", dependencies: []),
         .testTarget(name: "PracticalSwiftExtensionTest", dependencies: ["PracticalSwiftExtension"])
     ]
 )
