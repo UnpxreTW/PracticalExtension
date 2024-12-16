@@ -1,8 +1,8 @@
 //
-//  File.swift
+//  UIView.swift
+//  PracticalUIKitExtension
 //
-//
-//  Created by 米恩 on 2022/3/13.
+//  Copyright © 2024 UnpxreTW. All rights reserved.
 //
 
 #if canImport(UIKit)
@@ -10,14 +10,15 @@
 import UIKit
 
 public extension UIView {
-    convenience init(frame: CGRect, background color: UIColor) {
-        self.init(frame: frame)
-        backgroundColor = color
-    }
 
-    convenience init(background color: UIColor) {
-        self.init(frame: .zero, background: color)
-    }
+	convenience init(frame: CGRect, background color: UIColor) {
+		self.init(frame: frame)
+		backgroundColor = color
+	}
+
+	convenience init(background color: UIColor) {
+		self.init(frame: .zero, background: color)
+	}
 }
 
 #endif
