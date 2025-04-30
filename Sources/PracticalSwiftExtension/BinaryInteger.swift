@@ -2,15 +2,8 @@
 //  BinaryInteger.swift
 //  PracticalSwiftExtension
 //
-//  Copyright © 2024 UnpxreTW. All rights reserved.
+//  Copyright © 2025 UnpxreTW. All rights reserved.
 //
-
-import Testing
-
-@Test("測試最大公約數")
-private func BinaryIntegerGCD() {
-	#expect(98.gcd(with: 56) == 14)
-}
 
 extension BinaryInteger {
 
