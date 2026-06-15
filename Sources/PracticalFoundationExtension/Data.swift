@@ -9,6 +9,7 @@
 import Foundation
 
 extension Data {
+
 	public func printUInt8Array() -> String {
 		"[ " + map { String($0) }.joined(separator: ", ") + " ]"
 	}
