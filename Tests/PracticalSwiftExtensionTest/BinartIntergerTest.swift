@@ -8,8 +8,8 @@
 
 import Testing
 
-@Test("測試最大公約數")
+@Test
 @available(iOS 13.0, *)
-private func BinaryIntegerGCD() {
+private func 測試最大公約數() {
 	#expect(98.gcd(with: 56) == 14)
 }

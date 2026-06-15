@@ -10,14 +10,14 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
 
-	convenience init(frame: CGRect, background color: UIColor) {
+	public convenience init(frame: CGRect, background color: UIColor) {
 		self.init(frame: frame)
 		backgroundColor = color
 	}
 
-	convenience init(background color: UIColor) {
+	public convenience init(background color: UIColor) {
 		self.init(frame: .zero, background: color)
 	}
 }

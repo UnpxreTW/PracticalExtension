@@ -9,10 +9,10 @@
 import Foundation
 
 extension String.Encoding {
-    
-    public static var big5: String.Encoding {
-        let CFEncoding = CFStringEncodings.big5
-        let NSEncoding = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(CFEncoding.rawValue))
-        return String.Encoding(rawValue: NSEncoding)
-    }
+
+	public static var big5: String.Encoding {
+		let CFEncoding: CFStringEncodings = .big5
+		let NSEncoding: CFStringConvertEncodingToNSStringEncoding = .init(CFStringEncoding(CFEncoding.rawValue))
+		return String.Encoding(rawValue: NSEncoding)
+	}
 }
