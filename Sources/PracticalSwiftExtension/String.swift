@@ -1,9 +1,10 @@
 //
-//  String.swift
-//  
+//  PracticalSwiftExtension
 //
-//  Created by UnpxreTW on 2022/2/18.
+//  Copyright © 2026 Unpxre (GitHub: UnpxreTW)
+//  Licensed under the Apache License 2.0. See LICENSE for details.
 //
+//  SPDX-License-Identifier: Apache-2.0
 
 import Foundation
 
