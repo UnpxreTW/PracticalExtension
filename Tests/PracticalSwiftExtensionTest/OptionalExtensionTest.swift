@@ -6,41 +6,42 @@
 //
 //  SPDX-License-Identifier: Apache-2.0
 
+import Foundation
 import PracticalSwiftExtension
-import XCTest
+import Testing
 
-final class OptionalExtensionTest: XCTestCase {
-    
-    private let noneInt: Int? = nil
-    private let someInt: Int? = 0
-    
-    private let noneString: String? = nil
-    private let emptyString: String? = ""
-    private let someString: String? = "Test"
-    
-    private let isNil: Optional<Any> = nil
-    
-    func testIsNone() {
-        
-        XCTAssertTrue(noneInt.isNone)
-        XCTAssertFalse(someInt.isNone)
-        
-        XCTAssertTrue(noneString.isNone)
-        XCTAssertFalse(emptyString.isNone)
-        XCTAssertFalse(someString.isNone)
-        
-        XCTAssertTrue(isNil.isNone)
-    }
-    
-    func testIsSome() {
-        
-        XCTAssertFalse(noneInt.isSome)
-        XCTAssertTrue(someInt.isSome)
-    
-        XCTAssertFalse(noneString.isSome)
-        XCTAssertTrue(emptyString.isSome)
-        XCTAssertTrue(someString.isSome)
-        
-        XCTAssertFalse(isNil.isSome)
-    }
+private final class OptionalExtensionTest {
+
+	private let noneInt: Int? = nil
+	private let someInt: Int? = 0
+
+	private let noneString: String? = nil
+	private let emptyString: String? = ""
+	private let someString: String? = "Test"
+
+	private let isNil: Any? = nil
+
+	@Test
+	private func `is none`() {
+		#expect(noneInt.isNone)
+		#expect(!someInt.isNone)
+
+		#expect(noneString.isNone)
+		#expect(!emptyString.isNone)
+		#expect(!someString.isNone)
+
+		#expect(isNil.isNone)
+	}
+
+	@Test
+	private func `is some`() {
+		#expect(!noneInt.isSome)
+		#expect(someInt.isSome)
+
+		#expect(!noneString.isSome)
+		#expect(emptyString.isSome)
+		#expect(someString.isSome)
+
+		#expect(!isNil.isSome)
+	}
 }
